@@ -1,11 +1,11 @@
 import ejs from 'ejs';
 import puppeteer from 'puppeteer';
-import { templateError, defaultError } from '../utils/errors_config';
+import { templateError, defaultError } from '../utils/ErrorsConfig';
 import {
   getPdfUrl,
   getPdfData,
   getPdfTemplate,
-} from '../services/pdf_services';
+} from '../repositories/PdfRepository';
 
 async function create(request, response) {
   const { template, user_id } = request.body;
